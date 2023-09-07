@@ -10,7 +10,7 @@
   },
   "scripts": {
     "build": "npm run css",
-    "css-compile": "sass --style compressed --source-map --embed-sources --no-error-css --load-path=node_modules src/scss/:css/",
+    "css-compile": "sass --style compressed --source-map --embed-sources --no-error-css --load-path=node_modules src/scss/:assets/css/",
     "css-lint": "stylelint src/scss/",
     "css-prefix": "postcss --replace assets/css/styles.css --use autoprefixer --map",
     "css": "npm-run-all css-compile css-prefix",
