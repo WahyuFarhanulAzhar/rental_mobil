@@ -1,0 +1,1 @@
+{"version":3,"sources":["../scss/utilities/_colors.scss"],"names":[],"mappings":"AAGA,cACI,UAHM","file":"styles.css","sourcesContent":["\n$primary: #08c;\n\n.text-primary {\n    color: $primary;\n}"]}
