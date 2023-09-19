@@ -1,0 +1,93 @@
+.sec-footer {
+    width: 100%;
+    max-width: 1440px;
+    border-top: 1px solid rgba($black, 0.05);
+    background-color: rgba($black, 0.02);
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-wrapper {
+    @include flexbox(column);
+    width: 100%;
+    gap: 20px;
+}
+
+.footer {
+
+    &-top {
+        @include flexbox(row,flex-start,flex-start);
+        width: 100%;
+        padding: 70px 0px;
+        gap: 30px;
+
+        &-item {
+            @include flexbox(column,flex-start,flex-start);
+            width: 25%;
+            gap: 25px;
+            z-index: 1;
+
+            &-heading {
+                @include subtitle;
+                color: $black;
+            }
+
+            &-list {
+                @include flexbox(column,flex-start,flex-start);
+                gap: 15px;
+
+                a {
+                    @include body-1reguler;
+                    color: $black;
+
+                }
+            }
+        }
+    }
+
+    &-bot {
+        @include flexbox(ro,space-between,flex-start);
+        width: 100%;
+        padding: 40px 0px;
+
+        &-left {
+            @include flexbox(column,flex-start,flex-start);
+            gap: 12px;
+
+            &-copyright {
+                @include body-2bold;
+                color: $black;
+
+            }
+
+            &-list {
+                @include flexbox;
+                gap: 12px;
+
+                a {
+                    @include body-2reguler;
+                    opacity: 0.5;
+                }
+            }
+        }
+
+        &-right {
+            @include flexbox(row,flex-start,flex-end);
+            gap: 20px;
+
+            img {
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+
+    &-splash {
+        position: absolute;
+        width: 333px;
+        height: 346px;
+        right: -170px;
+        top: -114px;
+    }
+}

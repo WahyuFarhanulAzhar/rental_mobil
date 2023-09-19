@@ -1,0 +1,105 @@
+
+
+.header-wrapper {
+    @include flexbox;
+    width: 100%;
+    padding: 140px 0px 70px 0px;
+    position: relative;
+}
+
+.header {
+
+    &-left {
+        @include flexbox(column,flex-start);
+        width: 60%;
+        max-width: 670px;
+        gap: 60px;
+        z-index: 1;
+
+        &-txt {
+            @include flexbox(column);
+            gap: 30px;
+
+            &-heading {
+                @include h1;
+            }
+
+            &-text {
+                @include subtitle-reguler;
+            }
+        }
+
+        &-btn {
+            @include flexbox;
+            gap: 40px;
+            width: 100%;
+
+            &-blue {
+                @include flexbox(row,center,center);
+                gap: 10px;
+
+            }
+
+            &-white {
+                @include flexbox;
+                gap: 15px;
+                border: 1px solid var(--light-10, rgba(255, 255, 255, 0.10));
+                background: var(--light-10, rgba(255, 255, 255, 0.10));
+                
+                img {
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+        }
+    }
+
+    &-right {
+        @include flexbox;
+        width: 47%;
+        height: 570px;
+        position: absolute;
+        right: 0px;
+        top: 140px;
+        
+        &-img1 {
+            position: absolute;
+            width: 150px;
+            height: 70px;
+            left: 240px;
+            top: -20px;
+            background-color: $white;
+            box-shadow: 20px 20px 100px 0px rgba(0, 0, 0, 0.40), 8px 8px 0px 0px rgba(31, 32, 37, 0.15), -8px -8px 0px 0px rgba(0, 0, 0, 0.15);
+        }
+
+        &-img2 {
+            position: absolute;
+            width: 340px;
+            height: 220px;
+            right: -35px;
+            top: 80px;
+            background-color: $white;
+            box-shadow: 20px 20px 100px 0px rgba(0, 0, 0, 0.40), 8px 8px 0px 0px rgba(31, 32, 37, 0.15), -8px -8px 0px 0px rgba(0, 0, 0, 0.15);
+        }
+
+        &-img3 {
+            position: absolute;
+            width: 170px;
+            height: 180px;
+            left: 80px;
+            top: 300px;
+            background-color: $white;
+            box-shadow: 20px 20px 100px 0px rgba(0, 0, 0, 0.40), 8px 8px 0px 0px rgba(31, 32, 37, 0.15), -8px -8px 0px 0px rgba(0, 0, 0, 0.15);
+        }
+
+        &-img4 {
+            position: absolute;
+            width: 170px;
+            height: 200px;
+            right: -100px;
+            top: 370px;
+            background-color: $white;
+            box-shadow: 20px 20px 100px 0px rgba(0, 0, 0, 0.40), 8px 8px 0px 0px rgba(31, 32, 37, 0.15), -8px -8px 0px 0px rgba(0, 0, 0, 0.15);
+        }
+    }
+}

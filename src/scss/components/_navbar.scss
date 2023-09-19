@@ -1,0 +1,79 @@
+.nav-wrapper{
+@include flexbox(row,space-between);
+width: 100%;
+padding-top: 30px;
+position: relative;
+}
+.nav{
+    &-left{
+        @include flexbox;
+        gap: 50px;
+        width: 60%;
+
+        &-logo {
+            @include flexbox;
+        }
+
+        &-link {
+            @include flexbox;
+            gap: 40px;
+
+            &-item {
+                @include body-1bold;
+
+                &:hover {
+                    color: blueviolet;
+                }
+
+                .grid-dots-toggle {
+                    display: none;
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+        }
+    }
+
+    &-right {
+        @include flexbox(row,flex-end);
+        gap: 25px;
+        width: 40%;
+
+        &-icon {
+            width: 24px;
+            height: 24px;
+            transition: 200ms;
+
+            &:hover {
+                transform: scale(1.3);
+            }
+        }
+
+        &-btn {
+            @include flexbox;
+            gap: 40px;
+
+            &-login {
+                @include body-1bold;
+                border-left: 1px solid;
+                padding-left: 25px;
+                border-color: #fafafacb;
+                transition: 200ms;
+
+                &:hover {
+                    border-color: $primary;
+                    color: $primary;
+                }
+            }
+
+            &-blue {
+                @include flexbox;
+                gap: 10px;
+                padding: 15px 20px;
+                
+            }
+        }
+
+    }
+    
+}

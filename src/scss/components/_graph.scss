@@ -1,0 +1,43 @@
+.graph-wrapper {
+    @include flexbox(column,center);
+    width: 100%;
+    padding: 70px 0px;
+    gap: 60px;
+    z-index: 2;
+}
+
+.graph {
+
+    &-head {
+        @include flexbox(column,center,center);
+        width: 100%;
+        gap: 25px;
+
+        &-heading {
+            @include h2;
+            text-align: center;
+            width: 60%;
+
+            span {
+                @include h2;
+                color: $orange;
+            }
+        }
+
+        &-txt {
+            @include subtitle-reguler;
+            text-align: center;
+            width: 60%;
+        }
+    }
+
+    &-img {
+        @include flexbox(row,center,center);
+        width: 100%;
+
+        img {
+            width: 970px;
+            height: 340px;
+        }
+    }
+}

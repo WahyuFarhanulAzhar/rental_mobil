@@ -29,7 +29,7 @@
 }
 
 $fontFamilyTT:'TT Interfaces', sans-serif;
-
+$fontFamilyUrbanist:'Urbanist', sans-serif;
 
 $media: (
   xs: 0px,
@@ -49,3 +49,145 @@ $media: (
     }
   }
 }
+
+@mixin flexbox($direction:row, $content:flex-start, $item:center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $content;
+  align-items: $item;
+}
+
+@mixin body-1bold {
+  color: var(--light-100, #FFF);
+
+  /* Desktop/Body - 1/Bold */
+  font-family: Urbanist;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px; /* 150% */
+}
+
+@mixin body-2bold {
+  color: var(--dark-100, #1F2025);
+
+  /* Desktop/Body - 2/Bold */
+  font-family: Urbanist;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px; /* 142.857% */
+}
+
+@mixin body-1reguler {
+  color: var(--light-100, #FFF);
+
+  /* Desktop/Body - 1/Regular */
+  font-family: Urbanist;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+}
+
+@mixin body-2reguler {
+  color: var(--dark-100, #1F2025);
+
+  /* Desktop/Body - 2/Regular */
+  font-family: Urbanist;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+}
+
+@mixin body-3uppercase {
+  color: var(--light-100, #FFF);
+
+  /* Desktop/Body - 3/Black - Uppercase */
+  font-family: Urbanist;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 16px; /* 133.333% */
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+@mixin h1 {
+  color: var(--light-100, #FFF);
+
+  /* Desktop/H1/Black */
+  font-family: Urbanist;
+  font-size: 78px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+}
+
+@mixin h2 {
+  color: var(--light-100, #FFF);
+
+  /* Desktop/H2/Black */
+  font-family: Urbanist;
+  font-size: 46px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+}
+
+@mixin h3 {
+  color: var(--light-100, #FFF);
+
+  /* Desktop/H3/Black */
+  font-family: Urbanist;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 46px; /* 127.778% */
+}
+
+@mixin h4 {
+  color: var(--dark-100, #1F2025);
+
+  /* Desktop/H4/Bold */
+  font-family: Urbanist;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px; /* 128.571% */
+}
+
+@mixin subtitle {
+  color: var(--light-100, #FFF);
+
+  /* Desktop/Subtitle/Black */
+  font-family: Urbanist;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 30px; /* 150% */
+}
+
+@mixin subtitle-reguler {
+  color: var(--light-100, #FFF);
+
+  /* Desktop/Subtitle/Regular */
+  font-family: Urbanist;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px; /* 150% */
+}
+
+@mixin subtitle-bold {
+  color: var(--dark-100, #1F2025);
+
+  /* Desktop/H4/Bold */
+  font-family: Urbanist;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px; /* 128.571% */
+}
+

@@ -1,0 +1,52 @@
+.sec-dark {
+    @include flexbox(column,center,center);
+    background-color: $black;
+    width: 100%;
+    overflow: hidden;
+
+    .dark-wrapper {
+        
+        width: 100%;
+        max-width: 1440px;
+        margin-inline: auto;
+        position: relative;
+        
+    }
+
+    .dark {
+
+        &-bg1 {
+            position: absolute;
+            width: 1070.872px;
+            height: 1116.101px;
+            transform: scaleX(-1);
+            right: -40px;
+            top: -120px;
+        }
+
+        &-bg2 {
+            width: 642.57px;
+            height: 574px;
+            transform: rotate(-3deg);
+            position: absolute;
+            left: -249.73px;
+            top: 1772.579px;
+        }
+    }
+}
+
+.sec-white {
+    width: 100%;
+    background-color: $white;
+    overflow: hidden;
+    position: relative;
+    margin-top: -198px;
+    padding-top: 200px;
+
+    .divider2 {
+        &-item {
+            background-color: $black;
+        }
+    }
+}
+
