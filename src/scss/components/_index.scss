@@ -1,12 +1,13 @@
-@import "background";
+@import "psuedo";
+
+
+// landing page
 @import "navbar";
 @import "header";
-@import "customer";
-@import "feature";
-@import "information";
-@import "analytics";
-@import "benefit";
-@import "cta";
-@import "graph";
-@import "post";
+@import "showcase";
+@import "why";
+@import "pricing";
 @import "footer";
+
+// login page
+@import "login";

@@ -23,8 +23,8 @@ section, nav{
     .container{
         width: 100%;
         max-width: 1440px;
-        padding: 0px 80px;
-        margin: auto;
+        padding: 0px 100px;
+        margin-inline: auto;
         display: flex;
         flex-direction: row;
         @include respondsive(md){

@@ -1,0 +1,41 @@
+.showcase-wrapper {
+    @include flexbox(row,space-between,center);
+    margin-bottom: 120px;
+}
+
+.showcase {
+    &-item {
+        @include flexbox(row,space-between);
+        padding: 20px;
+        gap: 60px;
+
+        &-left {
+            @include flexbox(row);
+
+            img {
+                width: 100px;
+                height: 100px;
+            }
+        }
+
+        &-right {
+            @include flexbox(column);
+
+            &-number {
+                color: $light;
+                font-size: 48px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+            }
+
+            &-txt {
+                color: $light;
+                font-size: 40px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+            }
+        }
+    }
+}

@@ -7,7 +7,7 @@ html {
 
 body {
     -webkit-font-smoothing: antialiased;
-    // font-family: "poppins";
+    font-family: "poppins";
     // overflow: hidden;
 }
 *{
@@ -20,7 +20,7 @@ html, body, button{
 }
 button{
     cursor: pointer;
-    // font-family: "poppins";
+    font-family: "poppins";
     border: none;
     background: transparent;
 }
@@ -38,56 +38,9 @@ a{
     // color: black;
 }
 h1, h2, h3, h4, h5, h6, p{
-    margin: auto;
+    margin: 0px;
 }
 
 nav {
     width: 100%;
-}
-
-.grid-dots-toggle {
-    display: none;
-}
-
-.divider {
-    position: relative;
-    width: 100%;
-    height: 60px;
-    z-index: -1;
-}
-
-.divider2 {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    width: 100%;
-    padding: 70px 0px;
-    opacity: 0.1;
-
-    &-item {
-        width: 8px;
-        height: 8px;
-        background: #fff;
-        border-radius: 50px;
-    }
-}
-
-.btn {
-    padding: 20px 30px;
-    @include body-1bold;
-}
-
-.btn-blue {
-    background: var(--blue-100-normal, #205BF1);
-    border: 2px solid transparent;
-    transition: background-color 0.3s, border-color 0.3s, transform 0.3s;
-    transform-origin: center;
-
-    /* medium/blue */
-    box-shadow: 0px 5px 15px 0px rgba(32, 91, 241, 0.20);
-
-    &:hover {
-        background-color: transparent;
-        border-color:  #205BF1;
-    }
 }

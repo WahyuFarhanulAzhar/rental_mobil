@@ -1,93 +1,58 @@
 .sec-footer {
-    width: 100%;
-    max-width: 1440px;
-    border-top: 1px solid rgba($black, 0.05);
-    background-color: rgba($black, 0.02);
-    margin: auto;
-    position: relative;
-    overflow: hidden;
+    background-image: url(../../../assets/img/bg/Vector.png);
+    background-size: cover;
 }
 
 .footer-wrapper {
-    @include flexbox(column);
-    width: 100%;
-    gap: 20px;
+    @include flexbox;
+    margin-top: 120px;
+    padding-bottom: 80px;
 }
 
 .footer {
 
-    &-top {
-        @include flexbox(row,flex-start,flex-start);
-        width: 100%;
-        padding: 70px 0px;
-        gap: 30px;
+    &-left {
+        @include flexbox(row,center,center);
 
         &-item {
-            @include flexbox(column,flex-start,flex-start);
-            width: 25%;
-            gap: 25px;
-            z-index: 1;
+            @include flexbox(column,flex-end,flex-end);
+            gap: 16px;
 
-            &-heading {
-                @include subtitle;
-                color: $black;
-            }
-
-            &-list {
-                @include flexbox(column,flex-start,flex-start);
-                gap: 15px;
-
-                a {
-                    @include body-1reguler;
-                    color: $black;
-
-                }
+            a {
+                width: 50%;
+                color: #000;
+                font-family: Poppins;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
             }
         }
     }
 
-    &-bot {
-        @include flexbox(ro,space-between,flex-start);
-        width: 100%;
-        padding: 40px 0px;
+    &-right {
+        @include flexbox(row,flex-end);
 
-        &-left {
-            @include flexbox(column,flex-start,flex-start);
-            gap: 12px;
-
-            &-copyright {
-                @include body-2bold;
-                color: $black;
-
-            }
-
-            &-list {
+        &-item {
+            @include flexbox(column);
+            gap: 30px;
+            
+            a{
                 @include flexbox;
-                gap: 12px;
 
-                a {
-                    @include body-2reguler;
-                    opacity: 0.5;
+                img {
+
+                }
+
+                span{
+                    color: #000;
+                    font-family: Poppins;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
                 }
             }
         }
-
-        &-right {
-            @include flexbox(row,flex-start,flex-end);
-            gap: 20px;
-
-            img {
-                width: 24px;
-                height: 24px;
-            }
-        }
-    }
-
-    &-splash {
-        position: absolute;
-        width: 333px;
-        height: 346px;
-        right: -170px;
-        top: -114px;
     }
 }
