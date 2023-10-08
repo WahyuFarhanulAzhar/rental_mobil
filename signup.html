@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/styles.css">
-    <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <title>Sign up</title>
 </head>
 <body>
     
@@ -49,55 +50,57 @@
                     <div class="login-content-right grid-8">
                         <div class="login-content-right-head grid-12">
                             <img src="./assets/img/login/accountIcon.svg" alt="">
-                            <h2>Sign in </h2>
+                            <h2>Create your Account</h2>
                         </div>
-                        <form action="#" class="login-content-right-main grid-12">
-                            <div class="login-input">
-                                <label for="email">Email</label>
-                                <input type="text" id="email" name="email">
-                            </div>
-                            <div class="login-input">
-                                <label for="password">Password</label>
-                                <input type="password" id="password" name="password">
-                            </div>
-                            <a href="index.html" class="login-btn btn-primary">
-                                Sign in
-                            </a>
-                        </form>
-                        <div class="login-content-right-bot grid-12">
-                            <div class="login-bot-top grid-12">
-                                <div class="line"></div>
-                                <span>or</span>
-                                <div class="line"></div>
-                            </div>
-                            <div class="login-bot-mid grid-12">
-                                <a href="#" class="login-bot-mid-item">
-                                    <img src="./assets/img/login/icon1.svg" alt="">
-                                    <span>SSO</span>
-                                </a>
-                                <a href="#" class="login-bot-mid-item">
-                                    <img src="./assets/img/login/icon2.svg" alt="">
-                                    <span>Facebook</span>
-                                </a>
-                                <a href="#" class="login-bot-mid-item">
-                                    <img src="./assets/img/login/icon3.svg" alt="">
-                                    <span>Google</span>
-                                </a>
-                            </div>
-                            <div class="login-bot-bot grid-12">
-                                <span>
-                                    Don’t have an account? 
-                                    <a href="signup.html">
-                                        Sign up here
-                                    </a> 
-                                </span>
-                            </div>
+
+                        <div class="sec-signup grid-12">
+                            <form action="post" class="signup-wrapper signup grid-12">
+                                <input type="text" name="name" id="name" placeholder="Name" class="grid-12">
+                                <input type="text" name="email" id="email" placeholder="Email Address" class="grid-12">
+                                <div class="signup-phonenumber grid-12">
+                                    <input type="text" name="idphone" id="idphone" disabled placeholder="IDN +62" class="signup-phonenumber-id grid-3">
+                                    <input type="text" name="phone_number" id="phone_number" placeholder="Phone number" class="signup-phonenumber-number grid-9">
+                                </div>
+                                <div class="signup-place grid-12">
+                                    <input type="text" name="city" id="city" placeholder="City" class="signup-city-city grid-7">
+                                    <input type="text" name="country" id="country" placeholder="Country" class="signup-city-country grid-5">
+                                </div>
+                                <div class="signup-password grid-12">
+                                    <input type="password" name="password" placeholder="Password" id="password" class="grid-12">
+                                    <span toggle="#password-field" class="fa fa-fw fa-eye-slash field-icon toggle-password"></span>
+                                </div>
+                                <div class="signup-cpassword grid-12">
+                                    <input type="password" name="confirm_password" placeholder="Konfirmasi Password" id="confirm_password" class="grid-12">
+                                    <span toggle="#password-field" class="fa fa-fw fa-eye-slash field-icon toggle-password"></span>
+                                </div>                                
+                            
+                                <div class="signup-btn grid-12">
+                                    <div class="signup-btn-left grid-7">
+                                        <input type="checkbox" name="" id="">
+                                        <span>
+                                            I accept the 
+                                            <a href="#">
+                                                terms and conditions
+                                            </a> 
+                                        </span>
+                                    </div>
+                                    <div class="signup-btn-right grid-5">
+                                        <a href="login.html" class="signup-btn-right-btn btn-primary">
+                                            Sign up
+                                        </a>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
+
                     </div>
                 </div>
             </div>
         </div>
 
     </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./assets/js/main.js"></script>
 </body>
 </html>

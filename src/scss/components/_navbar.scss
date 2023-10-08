@@ -7,7 +7,7 @@
     &-left {
         @include flexbox;
 
-        span {
+        a {
             color: $light;
             font-size: 35px;
             font-style: normal;
