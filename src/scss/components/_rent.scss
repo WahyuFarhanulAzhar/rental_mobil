@@ -1,0 +1,48 @@
+.rent-wrapper {
+    width: 600px;
+    margin: 80px auto;
+    padding: 24px 40px;
+    background-color: #212529;
+    border-radius: 12px;
+    font-family: 'Poppins';
+    color: $light;
+    gap: 24px;
+}
+
+.rent {
+
+    &-header {
+        text-align: center;
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    &-body {
+
+        form {
+
+            .form-btn {
+                margin-top: 32px;
+                gap: 32px;
+                
+                button {
+                    padding: 12px 24px;
+                    color: $light;
+                    font-size: 24px;
+                    font-weight: 500;
+                    border-radius: 12px;
+                }
+
+                a {
+                    padding: 12px 24px;
+                    color: $light;
+                    font-size: 24px;
+                    font-weight: 500;
+                    border-radius: 12px;
+                }
+            }
+            
+        }
+    }
+}
+  
