@@ -8,6 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet">
+    <link rel="icon" href="<?= base_url('assets/') ?>img/bg/rent-car.svg">
 
     <title>Rental Mobil</title>
 

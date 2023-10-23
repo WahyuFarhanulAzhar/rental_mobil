@@ -1,58 +1,66 @@
 .sec-footer {
-    background-image: url(../../../assets/img/bg/Vector.png);
-    background-size: cover;
+	background: url("http://localhost/rental_mobil/assets/img/bg/Vector.png");
+	background-size: cover;
+	background-color: transparent;
 }
 
 .footer-wrapper {
-    @include flexbox;
-    margin-top: 120px;
-    padding-bottom: 80px;
+	@include flexbox;
+	margin-top: 120px;
+	padding-bottom: 80px;
 }
 
 .footer {
+	&-left {
+		@include flexbox(row, center, center);
 
-    &-left {
-        @include flexbox(row,center,center);
+		&-item {
+			@include flexbox(column, flex-end, flex-end);
+			gap: 16px;
 
-        &-item {
-            @include flexbox(column,flex-end,flex-end);
-            gap: 16px;
+			a {
+				width: 50%;
+				color: #000;
+				font-family: Poppins;
+				font-size: 16px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: normal;
 
-            a {
-                width: 50%;
-                color: #000;
-                font-family: Poppins;
-                font-size: 16px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: normal;
-            }
-        }
-    }
+				:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
 
-    &-right {
-        @include flexbox(row,flex-end);
+	&-right {
+		@include flexbox(row, flex-end);
 
-        &-item {
-            @include flexbox(column);
-            gap: 30px;
-            
-            a{
-                @include flexbox;
+		&-item {
+			@include flexbox(column);
+			gap: 30px;
 
-                img {
+			a {
+				@include flexbox(row, flex-start, center);
+				gap: 12px;
 
-                }
+				img {
+				}
 
-                span{
-                    color: #000;
-                    font-family: Poppins;
-                    font-size: 16px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: normal;
-                }
-            }
-        }
-    }
+				span {
+					color: #000;
+					font-family: Poppins;
+					font-size: 16px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: normal;
+
+					:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
 }

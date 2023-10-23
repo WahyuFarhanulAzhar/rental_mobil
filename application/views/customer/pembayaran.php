@@ -1,93 +1,96 @@
 <div style="height: 100px;"></div>
-<div class="container mt-5 mb-5">
-  <div class="row">
-    <div class="col-md-8">
-      <div class="card">
-        <div class="card-header alert alert-success">
-          Invoice Pembayaran Anda
-        </div>
-        <div class="card-body">
-          <table class="table text-white">
-          <?php foreach($transaksi as $tr): ?>
-            <tr>
-              <th>Merek Mobil</th>
-              <td>:</td>
-              <td><?= $tr->merek; ?></td>
-            </tr>
-            <tr>
-              <th>Tanggal Rental</th>
-              <td>:</td>
-              <td><?= date('d/m/Y', strtotime($tr->tgl_rental)); ?></td>
-            </tr>
-            <tr>
-              <th>Tanggal Kembali</th>
-              <td>:</td>
-              <td><?= date('d/m/Y', strtotime($tr->tgl_kembali)); ?></td>
-            </tr>
-            <tr>
-              <th>Biaya Sewa Perhari</th>
-              <td>:</td>
-              <td>Rp.<?= number_format($tr->harga, 0, ',', '.'); ?>,-</td>
-            </tr>
-            <tr>
-              <?php 
-                $x = strtotime($tr->tgl_kembali);
-                $y = strtotime($tr->tgl_rental);
-                $jmlHari = abs(($x - $y)/(60*60*24));
-              ?>
-              <th>Jumlah Hari Sewa</th>
-              <td>:</td>
-              <td><?= $jmlHari; ?> Hari</td>
-            </tr>
-            <tr class="text-success">
-              <th>Jumlah Pembayaran</th>
-              <td>:</td>
-              <td><button class="btn btn-sm btn-success">Rp.<?= number_format($tr->harga * $jmlHari, 0, ',', '.'); ?>,-</button></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td><a href="<?= base_url('customer/transaksi/cetak_invoice/'.$tr->id_rental) ?>" class="btn btn-sm btn-secondary">Print Invoice</a></td>
-            </tr>
 
-          <?php endforeach; ?>
-          </table>
+<section class="sec-payment">
+  <div class="container">
+    <div class="row d-flex jc-space-between grid-12">
+      <div class="col-md-8">
+        <div class="card">
+          <div class="card-header alert alert-success">
+            Invoice Pembayaran Anda
+          </div>
+          <div class="card-body">
+            <table class="table text-white">
+            <?php foreach($transaksi as $tr): ?>
+              <tr>
+                <th>Merek Mobil</th>
+                <td>:</td>
+                <td><?= $tr->merek; ?></td>
+              </tr>
+              <tr>
+                <th>Tanggal Rental</th>
+                <td>:</td>
+                <td><?= date('d/m/Y', strtotime($tr->tgl_rental)); ?></td>
+              </tr>
+              <tr>
+                <th>Tanggal Kembali</th>
+                <td>:</td>
+                <td><?= date('d/m/Y', strtotime($tr->tgl_kembali)); ?></td>
+              </tr>
+              <tr>
+                <th>Biaya Sewa Perhari</th>
+                <td>:</td>
+                <td>Rp.<?= number_format($tr->harga, 0, ',', '.'); ?>,-</td>
+              </tr>
+              <tr>
+                <?php 
+                  $x = strtotime($tr->tgl_kembali);
+                  $y = strtotime($tr->tgl_rental);
+                  $jmlHari = abs(($x - $y)/(60*60*24));
+                ?>
+                <th>Jumlah Hari Sewa</th>
+                <td>:</td>
+                <td><?= $jmlHari; ?> Hari</td>
+              </tr>
+              <tr class="text-success">
+                <th>Jumlah Pembayaran</th>
+                <td>:</td>
+                <td><button class="btn btn-sm btn-success">Rp.<?= number_format($tr->harga * $jmlHari, 0, ',', '.'); ?>,-</button></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td><a href="<?= base_url('customer/transaksi/cetak_invoice/'.$tr->id_rental) ?>" class="btn btn-sm btn-secondary">Print Invoice</a></td>
+              </tr>
+  
+            <?php endforeach; ?>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-header alert alert-primary">
+            Invormasi Pembayaran
+          </div>
+          <div class="card-body">
+            <p class="text-success mb-3">Silahkan melakukan pembayaran melalui nomor rekening di bawah ini :</p>
+  
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Bank Mandiri 1212423344</li>
+              <li class="list-group-item">Bank BCA 645623534</li>
+              <li class="list-group-item">Bank BNI 56435645</li>
+            </ul>
+  
+            <?php
+            if(empty($tr->bukti_pembayaran)){ ?>
+              <!-- Button trigger modal -->
+              <button style="width: 100%;" type="button" class="btn btn-sm btn-danger mt-3" data-toggle="modal" data-target="#exampleModal">
+                Upload Bukti Pembayaran
+              </button>
+            <?php }
+            elseif($tr->status_pembayaran == '0'){ ?>
+              <button style="width: 100%;" class="btn btn-sm btn-warning mt-3"><i class="fa fa-clock-o"></i> Menunggu Konfirmasi</button>
+            <?php }
+            elseif($tr->status_pembayaran == '1'){ ?>
+              <button style="width: 100%;" class="btn btn-sm btn-success mt-3"><i class="fa fa-check"></i> Pembayaran Selesai</button>
+            <?php } ?>
+          </div>
         </div>
       </div>
     </div>
-    <div class="col-md-4">
-      <div class="card">
-        <div class="card-header alert alert-primary">
-          Invormasi Pembayaran
-        </div>
-        <div class="card-body">
-          <p class="text-success mb-3">Silahkan melakukan pembayaran melalui nomor rekening di bawah ini :</p>
-
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">Bank Mandiri 1212423344</li>
-            <li class="list-group-item">Bank BCA 645623534</li>
-            <li class="list-group-item">Bank BNI 56435645</li>
-          </ul>
-
-          <?php
-          if(empty($tr->bukti_pembayaran)){ ?>
-            <!-- Button trigger modal -->
-            <button style="width: 100%;" type="button" class="btn btn-sm btn-danger mt-3" data-toggle="modal" data-target="#exampleModal">
-              Upload Bukti Pembayaran
-            </button>
-          <?php }
-          elseif($tr->status_pembayaran == '0'){ ?>
-            <button style="width: 100%;" class="btn btn-sm btn-warning mt-3"><i class="fa fa-clock-o"></i> Menunggu Konfirmasi</button>
-          <?php }
-          elseif($tr->status_pembayaran == '1'){ ?>
-            <button style="width: 100%;" class="btn btn-sm btn-success mt-3"><i class="fa fa-check"></i> Pembayaran Selesai</button>
-          <?php } ?>
-        </div>
-      </div>
-    </div>
+  
   </div>
-
-</div>
+</section>
 
 
 <!-- Modal untuk upload pembayarn -->

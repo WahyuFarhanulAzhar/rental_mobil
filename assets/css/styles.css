@@ -334,6 +334,10 @@ body {
   align-items: center;
 }
 
+.align-item-end {
+  align-items: flex-end;
+}
+
 .jc-space-between {
   justify-content: space-between;
 }
@@ -348,10 +352,6 @@ body {
   border-radius: 32px;
   border: solid 1px;
   filter: blur(1px);
-}
-
-.form-group {
-  margin-bottom: 15px;
 }
 
 label {
@@ -374,6 +374,10 @@ label {
   border-color: #007bff; /* Primary color */
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.relative {
+  position: relative;
 }
 
 button {
@@ -717,8 +721,9 @@ a :hover {
 }
 
 .sec-footer {
-  background-image: url(../../../assets/img/bg/Vector.png);
+  background: url("http://localhost/rental_mobil/assets/img/bg/Vector.png");
   background-size: cover;
+  background-color: transparent;
 }
 
 .footer-wrapper {
@@ -752,6 +757,9 @@ a :hover {
   font-weight: 400;
   line-height: normal;
 }
+.footer-left-item a :hover {
+  text-decoration: underline;
+}
 .footer-right {
   display: flex;
   flex-direction: row;
@@ -769,7 +777,8 @@ a :hover {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
+  gap: 12px;
 }
 .footer-right-item a span {
   color: #000;
@@ -779,13 +788,16 @@ a :hover {
   font-weight: 400;
   line-height: normal;
 }
+.footer-right-item a span :hover {
+  text-decoration: underline;
+}
 
 .login-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding-block: 40px;
+  padding-block: 120px;
 }
 
 .login-content {
@@ -803,7 +815,7 @@ a :hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url(../../../assets/img/login/Rectangle\ 14.png);
+  background-image: url(../../../../rental_mobil/assets/img/login/login_bg.png);
   background-size: cover;
   border-radius: 20px;
   height: 100%;
@@ -841,7 +853,7 @@ a :hover {
   justify-content: center;
   align-items: center;
   padding: 20px;
-  gap: 34px;
+  gap: 12px;
 }
 .login-content-right-head {
   display: flex;
@@ -870,15 +882,11 @@ a :hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 10px;
 }
-.login-content-right-main .login-input {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+.login-content-right-main span {
+  height: 50px;
 }
-.login-content-right-main .login-input label {
+.login-content-right-main .form-group label {
   color: #fff;
   font-family: Poppins;
   font-size: 20px;
@@ -886,32 +894,13 @@ a :hover {
   font-weight: 700;
   line-height: normal;
 }
-.login-content-right-main .login-input input {
-  width: 366px;
-  height: 47px;
-  border-radius: 20px;
-  background: #fff;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  padding: 20px;
-  font-family: Poppins;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-.login-content-right-main .login-input input:focus {
-  border: 0px;
-}
-.login-content-right-main a {
-  border-radius: 20px;
-  color: #fff;
-  font-family: Poppins;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  margin-top: 20px;
-  padding: 10px 40px;
+.login-content-right-main .form-group i {
+  float: right;
+  right: 16px;
+  top: 40px;
+  position: absolute;
+  z-index: 2;
+  cursor: pointer;
 }
 .login-content-right-bot {
   display: flex;
@@ -991,7 +980,7 @@ a :hover {
   line-height: normal;
 }
 .login-content-right-bot .login-bot-bot span a {
-  color: #FFF;
+  color: #fff;
   font-family: Poppins;
   font-size: 11px;
   font-style: normal;
@@ -1009,60 +998,47 @@ a :hover {
   justify-content: flex-start;
   align-items: flex-start;
   padding: 0px 60px;
-  gap: 12px;
 }
 
-.signup input {
-  padding: 12px 20px;
-  border-radius: 20px;
-  background: #FFF;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-}
-.signup-phonenumber {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-.signup-phonenumber-id {
-  border-top-right-radius: unset !important;
-  border-bottom-right-radius: unset !important;
-}
-.signup-phonenumber-number {
-  border-top-left-radius: unset !important;
-  border-bottom-left-radius: unset !important;
-}
-.signup-place {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
+.signup .d-flex {
   gap: 8px;
 }
-.signup-password {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+.signup .d-flex span {
+  margin-top: 24px;
+  color: #fff;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.signup .d-flex span a {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration-line: underline;
+}
+.signup .d-flex span a:hover {
+  color: #FD9800;
+}
+.signup .form-group {
   position: relative;
 }
-.signup-password span {
-  float: right;
-  right: 20px;
-  position: absolute;
-  z-index: 2;
-  cursor: pointer;
+.signup .form-group label {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
-.signup-cpassword {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-.signup-cpassword span {
+.signup .form-group i {
   float: right;
-  right: 20px;
+  right: 16px;
+  top: 36px;
   position: absolute;
   z-index: 2;
   cursor: pointer;

@@ -1,57 +1,60 @@
 <div style="height: 150px;"></div>
-<div class="container">
-  <div class="card mx-auto bg-dark">
-    <div class="card-header text-white">
-      Data Transaksi Anda
-    </div>
-    <span class="mt-2 p-2"><?= $this->session->flashdata('pesan'); ?></span>
-    <div class="card-body">
-      <table class="table table-bordered table-striped text-white">
-        <tr>
-          <th>No</th>
-          <th>Nama Customer</th>
-          <th>Merek Mobil</th>
-          <th>No. Plat</th>
-          <th>Harga Sewa</th>
-          <th>Action</th>
-          <th>Batal</th>
-        </tr>
 
-        <?php
-        $no = 1;
-        foreach($transaksi as $tr): ?>
-        <tr>
-          <td><?= $no++; ?></td>
-          <td><?= $tr->nama; ?></td>
-          <td><?= $tr->merek; ?></td>
-          <td><?= $tr->no_plat; ?></td>
-          <td>Rp.<?= number_format($tr->harga, 0, ',', '.'); ?>,-</td>
-          <td>
-            <?php if($tr->status_rental == "Selesai"){ ?>
-              <button class="btn btn-sm btn-danger">Rental Selesai</button>
-            <?php }
-            else{ ?>
-              <a href="<?= base_url('customer/transaksi/pembayaran/'.$tr->id_rental); ?>" class="btn btn-sm btn-success">Cek Pembayaran</a>
-            <?php } ?>
-          </td>
-          <td>
-            
-            <?php if($tr->status_rental == 'Belum Selesai'){ ?>
-              <a onclick="return confirm('Yakin batal?')" class="btn btn-sm btn-danger" href="<?= base_url('customer/transaksi/batal_transaksi/'.$tr->id_rental) ?>">Batal</a>
-            <?php }
-            else{ ?>
-              <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#exampleModal">
-                Batal
-              </button>
-            <?php } ?>
-          </td>
-        </tr>
-
-        <?php endforeach; ?>
-      </table>
+<section class="sec-transaksi">
+  <div class="container">
+    <div class="card mx-auto bg-dark">
+      <div class="card-header text-white">
+        Data Transaksi Anda
+      </div>
+      <span class="mt-2 p-2"><?= $this->session->flashdata('pesan'); ?></span>
+      <div class="card-body">
+        <table class="table table-bordered table-striped text-white">
+          <tr>
+            <th>No</th>
+            <th>Nama Customer</th>
+            <th>Merek Mobil</th>
+            <th>No. Plat</th>
+            <th>Harga Sewa</th>
+            <th>Action</th>
+            <th>Batal</th>
+          </tr>
+  
+          <?php
+          $no = 1;
+          foreach($transaksi as $tr): ?>
+          <tr>
+            <td><?= $no++; ?></td>
+            <td><?= $tr->nama; ?></td>
+            <td><?= $tr->merek; ?></td>
+            <td><?= $tr->no_plat; ?></td>
+            <td>Rp.<?= number_format($tr->harga, 0, ',', '.'); ?>,-</td>
+            <td>
+              <?php if($tr->status_rental == "Selesai"){ ?>
+                <button class="btn btn-sm btn-danger">Rental Selesai</button>
+              <?php }
+              else{ ?>
+                <a href="<?= base_url('customer/transaksi/pembayaran/'.$tr->id_rental); ?>" class="btn btn-sm btn-success">Cek Pembayaran</a>
+              <?php } ?>
+            </td>
+            <td>
+              
+              <?php if($tr->status_rental == 'Belum Selesai'){ ?>
+                <a onclick="return confirm('Yakin batal?')" class="btn btn-sm btn-danger" href="<?= base_url('customer/transaksi/batal_transaksi/'.$tr->id_rental) ?>">Batal</a>
+              <?php }
+              else{ ?>
+                <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#exampleModal">
+                  Batal
+                </button>
+              <?php } ?>
+            </td>
+          </tr>
+  
+          <?php endforeach; ?>
+        </table>
+      </div>
     </div>
   </div>
-</div>
+</section>
 
 <div style="height: 180px;"></div>
 

@@ -1,60 +1,59 @@
 .signup-wrapper {
     @include flexbox(column);
     padding: 0px 60px;
-    gap: 12px;
 
 }
 
 .signup {
 
-    input {
-        padding: 12px 20px;
-        border-radius: 20px;
-        background: #FFF;
-        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    }
-
-    &-phonenumber {
-        @include flexbox(row);
-
-        &-id {
-           border-top-right-radius: unset !important;
-           border-bottom-right-radius: unset !important;
-           
-        }
-
-        &-number {
-            border-top-left-radius: unset !important;
-            border-bottom-left-radius: unset !important;
-        }
-    }
-
-    &-place {
-        @include flexbox;
+    .d-flex {
         gap: 8px;
 
-    }
-
-    &-password {
-        @include flexbox(row,center,center);
-        position: relative;
-        
         span {
-            float: right;
-            right: 20px;
-            position: absolute;
-            z-index: 2;
-            cursor: pointer;
+            margin-top: 24px;
+            color: $light;
+            font-family: Poppins;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+
+            a {
+                color: #fff;
+                font-family: Poppins;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                text-decoration-line: underline;
+
+                &:hover {
+                    color: $primary;
+                }
+            }
         }
     }
 
-    &-cpassword {
-        @include flexbox(row,center,center);
+    .form-group {
         position: relative;
-        
-        span {
+
+        label {
+            color: $light;
+            font-family: Poppins;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        input {
+            
+        }
+
+        i {
             float: right;
-            right: 20px;
+            right: 16px;
+            top: 36px;
             position: absolute;
             z-index: 2;
             cursor: pointer;

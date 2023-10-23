@@ -1,4 +1,4 @@
-<section class="sec-header">
+<section class="sec-header" id="header">
         <div class="container">
             <div class="header-wrapper header grid-12">
                 <div class="header-content grid-12">
@@ -61,7 +61,7 @@
         </div>
     </section>
 
-    <section class="sec-why">
+    <section class="sec-why" id="why">
         <div class="container">
             <div class="why-wrapper why grid-12">
                 <div class="why-heading grid-12">
@@ -102,7 +102,7 @@
         </div>
     </section>
 
-    <section class="sec-pricing">
+    <section class="sec-pricing" id="pricing">
         <div class="container">
             <div class="pricing-wrapper pricing grid-12">
                 <div class="pricing-heading grid-12">
@@ -117,7 +117,7 @@
                                 Basic
                             </span>
                             <h5>
-                                $24/ <span>a day</span>
+                                Rp 100.000/ <span>per hari</span>
                             </h5>
                         </div>
                         <div class="pricing-row-item-content grid-12">
@@ -141,7 +141,7 @@
                                 Premium
                             </span>
                             <h5>
-                                $50/ <span>a month</span>
+                               Rp 200.000/ <span>per hari</span>
                             </h5>
                         </div>
                         <div class="pricing-row-item-content grid-12">
@@ -173,7 +173,7 @@
                                 Ultra
                             </span>
                             <h5>
-                                $80/ <span>a day</span>
+                                Rp 800.000/ <span>per hari</span>
                             </h5>
                         </div>
                         <div class="pricing-row-item-content grid-12">

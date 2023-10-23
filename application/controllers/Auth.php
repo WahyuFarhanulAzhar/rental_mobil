@@ -7,9 +7,7 @@ class Auth extends CI_Controller{
     $this->_rules();
 
     if($this->form_validation->run() == FALSE){
-      $this->load->view('templates_admin/header');
       $this->load->view('form_login');
-      $this->load->view('templates_admin/footer');
     }
     else{
       $username = $this->input->post('username');

@@ -96,6 +96,10 @@ body {
 	align-items: center;
 }
 
+.align-item-end {
+	align-items: flex-end;
+}
+
 .jc-space-between {
 	justify-content: space-between;
 }
@@ -110,10 +114,6 @@ body {
 	border-radius: 32px;
 	border: solid 1px;
 	filter: blur(1px);
-}
-
-.form-group {
-	margin-bottom: 15px;
 }
 
 label {
@@ -137,6 +137,10 @@ label {
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
   }
+}
+
+.relative {
+	position: relative;
 }
 
 button {
